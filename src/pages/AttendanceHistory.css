@@ -1,0 +1,219 @@
+.history-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.history-header {
+  margin-bottom: 2rem;
+}
+
+.history-header h1 {
+  font-size: 1.75rem;
+  color: #e6f1ff;
+  margin: 0;
+}
+
+.history-subtitle {
+  color: #a8b2d1;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Stats */
+.history-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.h-stat {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.h-stat-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #e6f1ff;
+}
+
+.h-stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #a8b2d1;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.h-stat.present .h-stat-value { color: #64ffda; }
+.h-stat.absent .h-stat-value { color: #ff5252; }
+.h-stat.percentage .h-stat-value { color: #448aff; }
+
+/* Filters */
+.history-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.filter-group label {
+  display: block;
+  color: #a8b2d1;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #e6f1ff;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-group select:focus {
+  border-color: #64ffda;
+}
+
+.filter-group select option {
+  background: #16213e;
+  color: #e6f1ff;
+}
+
+/* Table */
+.history-table-container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  color: #a8b2d1;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.history-table td {
+  padding: 0.75rem 1rem;
+  color: #ccd6f6;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.history-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.history-table tr.present {
+  border-left: 3px solid rgba(100, 255, 218, 0.5);
+}
+
+.history-table tr.absent {
+  border-left: 3px solid rgba(255, 82, 82, 0.5);
+}
+
+.student-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-course-name {
+  display: block;
+  font-weight: 600;
+  color: #e6f1ff;
+  font-size: 0.85rem;
+}
+
+.table-course-id {
+  display: block;
+  color: #5a6a8a;
+  font-size: 0.7rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-badge.present {
+  background: rgba(100, 255, 218, 0.12);
+  color: #64ffda;
+}
+
+.status-badge.absent {
+  background: rgba(255, 82, 82, 0.12);
+  color: #ff5252;
+}
+
+.method-badge {
+  background: rgba(68, 138, 255, 0.1);
+  color: #448aff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.empty-row {
+  text-align: center;
+  color: #5a6a8a;
+  padding: 3rem 1rem !important;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .history-page {
+    padding: 1rem;
+  }
+
+  .history-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .history-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-filters {
+    flex-direction: column;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.78rem;
+  }
+}
