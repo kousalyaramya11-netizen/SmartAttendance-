@@ -5,7 +5,7 @@ import { useAttendance } from '../context/AttendanceContext';
 import { subjectCatalog } from '../data/mockData';
 import './FaceScan.css';
 
-const MODEL_URL = '/models';
+const MODEL_URL = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/models`;
 
 export default function FaceScan() {
   const { currentUser } = useAuth();

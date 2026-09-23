@@ -90,4 +90,4 @@ async function verifyAttendance({ studentId, sessionToken, userId }) {
   };
 }
 
-export { verifyAttendance };
+export { verifyAttendance, getTodaysAttendanceSummary };
